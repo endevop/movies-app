@@ -1,0 +1,36 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Popular Movies</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Movie details -->
+    <string name="action_favorite">Favorite</string>
+    <string name="button_watch_trailers">Watch trailers</string>
+    <string name="button_no_trailers">No available trailers</string>
+    <string name="button_read_reviews">Read reviews</string>
+    <string name="button_no_reviews">No available reviews</string>
+
+    <!-- movie list setting related -->
+    <string name="pref_movie_list_key" translatable="false">pref_movie_list_key</string>
+    <string name="pref_movie_list_default" translatable="false">popular</string>
+    <string name="pref_movie_list_popular" translatable="false">popular</string>
+    <string name="pref_movie_list_top_rated" translatable="false">top_rated</string>
+    <string name="pref_movie_list_favorite" translatable="false">favorite</string>
+    <string name="pref_movie_list_title">Select movie list</string>
+    <string name="pref_movie_list_summary">Select movie list</string>
+
+    <!--string name="intent_extra_movie" translatable="false">movie</string-->
+    <string name="not_online">No network connection</string>
+    <string name="saved_instance_movies_list" translatable="false"></string>
+    <string name="format_release_date">Release date: <xliff:g id="release_date">%1$s</xliff:g></string>
+    <string name="format_review_by">Review by <xliff:g id="review_by">%1$s</xliff:g></string>
+    <string name="movie_position_key" translatable="false">movie_position_key</string>
+
+    <!-- SyncAdapter related -->
+    <string name="sync_account_type">popularmovies.desk.example.com</string>
+    <string name="content_authority">com.example.desk.popularmovies</string>
+
+    <!-- about text -->
+    <string name="menu_about_item">About</string>
+    <string name="about_text">This app is using The Movie Database (TMDb). Please visit www.themoviedb.org</string>
+
+</resources>
