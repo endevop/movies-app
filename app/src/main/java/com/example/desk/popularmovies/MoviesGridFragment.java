@@ -90,7 +90,7 @@ public class MoviesGridFragment extends Fragment implements LoaderManager.Loader
 
                     Uri uri = MovieContract.MovieEntry
                             .buildMovieUri(cursor.getLong(COLUMN_MOVIE_DB_ID));
-                    ((Callback) getActivity()).onItemSelected(uri);
+                    ((Callback) getActivity()).onItemSelected(uri, view);
                 }
             }
         });
@@ -109,6 +109,7 @@ public class MoviesGridFragment extends Fragment implements LoaderManager.Loader
     public void onActivityCreated(Bundle savedInstance) {
         super.onActivityCreated(savedInstance);
         getLoaderManager().initLoader(GRID_LOADER_ID, savedInstance, this);
+        //getActivity().supportPostponeEnterTransition();
     }
 
     // Reads sort order setting
@@ -155,6 +156,8 @@ public class MoviesGridFragment extends Fragment implements LoaderManager.Loader
         if(mPosition != GridView.INVALID_POSITION) {
             gv.smoothScrollToPosition(mPosition);
         }
+
+        //getActivity().supportStartPostponedEnterTransition();
     }
 
     @Override
@@ -173,6 +176,6 @@ public class MoviesGridFragment extends Fragment implements LoaderManager.Loader
         /**
          * Callback for when an item has been selected.
          */
-        void onItemSelected(Uri movieUri);
+        void onItemSelected(Uri movieUri, View view);
     }
 }

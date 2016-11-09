@@ -24,6 +24,9 @@ public class MovieDetailsActivity extends AppCompatActivity
             getSupportFragmentManager().beginTransaction()
                     .add(R.id.movie_detail_container, fragment, MovieDetailsFragment.TAG)
                     .commit();
+
+            // Being here means we are in animation mode
+            //supportPostponeEnterTransition();
         }
     }
 

@@ -33,4 +33,7 @@
     <string name="menu_about_item">About</string>
     <string name="about_text">This app is using The Movie Database (TMDb). Please visit www.themoviedb.org</string>
 
+    <!-- transition -->
+    <string name="detail_movie_poster_transition_name">detail_movie_poster_transiton_name</string>
+
 </resources>

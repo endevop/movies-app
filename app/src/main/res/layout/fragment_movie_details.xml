@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="277dp"
         android:id="@+id/movie_poster"
+        android:transitionName="@string/detail_movie_poster_transition_name"
         android:layout_gravity="center_horizontal"
         android:background="@color/colorBlack"/>
 

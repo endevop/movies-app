@@ -6,4 +6,5 @@
     android:id="@+id/grid_item_movie"
     android:scaleType="fitCenter"
     android:background="@drawable/touch_selector"
+    android:transitionName="@string/detail_movie_poster_transition_name"
     />

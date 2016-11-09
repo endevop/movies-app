@@ -3,6 +3,7 @@ package com.example.desk.popularmovies;
 
 import android.content.Context;
 import android.database.Cursor;
+import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.CursorAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,8 +13,10 @@ import android.widget.ImageView;
 import com.squareup.picasso.Picasso;
 
 public class ImageViewAdapter extends CursorAdapter {
+    public ImageView mPosterView;
 
     public ImageViewAdapter(Context context, Cursor c, int flags) {
+
         super(context, c, flags);
     }
 
@@ -21,7 +24,7 @@ public class ImageViewAdapter extends CursorAdapter {
     public View newView(Context context, Cursor cursor, ViewGroup parent) {
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.grid_item_movie, parent, false);
-
+        mPosterView = (ImageView) view.findViewById(R.id.movie_poster);
         return view;
     }
 
@@ -35,5 +38,6 @@ public class ImageViewAdapter extends CursorAdapter {
                 .placeholder(R.drawable.placeholder)
                 .error(R.drawable.placeholder_error)
                 .into((ImageView) view);
+        ViewCompat.setTransitionName(view, "poster" + cursor.getPosition());
     }
 }

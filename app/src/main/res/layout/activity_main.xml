@@ -1,5 +1,6 @@
 <fragment xmlns:android="http://schemas.android.com/apk/res/android"
 xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
 android:id="@+id/fragment_movies_grid"
 android:name="com.example.desk.popularmovies.MoviesGridFragment"
 android:layout_width="match_parent"

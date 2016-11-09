@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -111,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements MoviesGridFragmen
         return movieList;
     }
 
-    public void onItemSelected(Uri movieUri) {
+    public void onItemSelected(Uri movieUri, View view) {
         if(mTwoPane) {
             // details
             Bundle detailsArgs = new Bundle();
@@ -145,7 +148,12 @@ public class MainActivity extends AppCompatActivity implements MoviesGridFragmen
 
         } else {
             Intent intent = new Intent(this, MovieDetailsActivity.class).setData(movieUri);
-            startActivity(intent);
+            //startActivity(intent);
+            ActivityOptionsCompat activityOptions =
+                    ActivityOptionsCompat.makeSceneTransitionAnimation(this,
+                            new Pair<View, String>(view,
+                                    getString(R.string.detail_movie_poster_transition_name)));
+            ActivityCompat.startActivity(this, intent, activityOptions.toBundle());
         }
     }
 }
